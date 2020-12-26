@@ -1,6 +1,5 @@
 # leetcode 15
 
-# time limit exceeded
 def threeSum_0(nums):
     nums.sort()
     result = []
