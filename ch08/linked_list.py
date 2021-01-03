@@ -1,4 +1,7 @@
 
+# leetcode 에서 매개변수로 ListNode() 가 주어질 때,
+# head_pointer = node 로 주어지고 마찬가지로 head_pointer = node 로 포인터 반환 필요
+
 # 1. LinkedList 로 연결리스트 구현
 # 연결리스트 linked_list = LinkedList() 에서 linked_list.head 가 헤드 포인터 역할 (head_pointer = node)
 
