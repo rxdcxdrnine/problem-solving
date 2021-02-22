@@ -18,7 +18,7 @@ def combinationSum_0(candidates, target):
         else:
             pass
 
-        return discovered
+        return discovered[:]
 
 
     for num in candidates:
