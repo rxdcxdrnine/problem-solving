@@ -16,15 +16,14 @@ def permute_0(nums):
         discovered.append(v)
 
         if depth == length:
-            result.append(discovered[:])
+            result.append(discovered)
         else:
             for w in graph[v]:
                 if w not in discovered:
                     discovered = recursive_dfs(w, depth, discovered)
                     discovered.pop()
 
-        depth -= 1
-        return discovered
+        return discovered[:]
 
     for num in nums:
         recursive_dfs(num, 0, [])
