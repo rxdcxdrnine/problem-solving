@@ -19,10 +19,9 @@ def combine_0(n, k):
         else:
             for w in graph[v]:
                 if w not in discovered:
-                    recursive_dfs(w, depth, discovered)
+                    discovered = recursive_dfs(w, depth, discovered)
                     discovered.pop()
 
-        depth -= 1
         return discovered
 
     for num in nums:
