@@ -22,7 +22,7 @@ def combine_0(n, k):
                     discovered = recursive_dfs(w, depth, discovered)
                     discovered.pop()
 
-        return discovered
+        return discovered[:]
 
     for num in nums:
         recursive_dfs(num, 0, [])
