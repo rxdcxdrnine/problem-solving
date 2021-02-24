@@ -22,6 +22,9 @@ def findItinerary_0(tickets):
                     discovered = recursive_dfs(w, depth, discovered)
                     discovered.pop()
                     graph[v].append(w)
+                    
+                   if len(result) == 1:
+                       break
 
         return discovered[:]
 
