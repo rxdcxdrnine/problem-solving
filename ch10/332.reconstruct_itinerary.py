@@ -2,10 +2,9 @@
 
 import collections
 
-# time limit exceeded
 def findItinerary_0(tickets):
     graph = collections.defaultdict(list)
-    for ticket in tickets:
+    for ticket in sorted(tickets):
         graph[ticket[0]].append(ticket[1])
 
 
@@ -23,6 +22,9 @@ def findItinerary_0(tickets):
                     discovered = recursive_dfs(w, depth, discovered)
                     discovered.pop()
                     graph[v].append(w)
+                    
+                   if len(result) == 1:
+                       break
 
         return discovered[:]
 
