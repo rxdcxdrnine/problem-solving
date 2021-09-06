@@ -1,5 +1,5 @@
 def isPalindrome(s: str) -> bool:
-    s: list = [char.lower() for char in s if char.isalnum()]
+    s = [char.lower() for char in s if char.isalnum()]
     return s == s[::-1]
 
 
