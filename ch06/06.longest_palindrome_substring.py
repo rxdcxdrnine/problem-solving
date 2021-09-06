@@ -19,7 +19,7 @@ def longestPalindrome(s: str) -> str:
             even_left -= 1
             even_right += 1
         even = s[even_left + 1: even_right - 1]
-
+        
         result = max(result, odd, even, key=len)
 
     return result
