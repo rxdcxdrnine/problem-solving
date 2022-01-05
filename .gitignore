@@ -1,1 +1,14 @@
-.idea/
+**/.idea/
+
+# dir
+**/.gradle/
+**/gradle/
+**/resources/
+
+# file
+build.gradle
+.gitattributes
+.gitignore
+gradlew
+gradlew.bat
+settings.gradle
