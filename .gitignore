@@ -1,6 +1,7 @@
-**/.idea/
-
 # dir
+**/.vscode/
+**/bin/
+**/lib/
 **/.gradle/
 **/gradle/
 **/resources/
