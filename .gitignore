@@ -1,15 +1,7 @@
 # dir
+**/.idea/
 **/.vscode/
-**/bin/
-**/lib/
-**/.gradle/
-**/gradle/
-**/resources/
+**/out/
 
 # file
-build.gradle
-.gitattributes
-.gitignore
-gradlew
-gradlew.bat
-settings.gradle
+java.iml
