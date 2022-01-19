@@ -1,4 +1,6 @@
-class Solution {
+package leetcode;
+
+class LEETCODE_7 {
     public int reverse(int x) {
         long rev = 0;
         double bound = Math.pow(2, 31);

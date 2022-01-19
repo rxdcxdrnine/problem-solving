@@ -1,4 +1,9 @@
-class Solution {
+package leetcode;
+
+
+import java.util.stream.IntStream;
+
+class LEETCODE_1 {
     public int[] twoSum(int[] nums, int target) {
         int[] inds = IntStream.range(0, nums.length)
             .boxed()

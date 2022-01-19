@@ -1,9 +1,14 @@
-class Solution {
+package leetcode;
+
+import java.util.Arrays;
+import java.util.Comparator;
+
+class LEETCODE_14 {
     public String longestCommonPrefix(String[] strs) {
 
         String prefix = "";
-        String shortest = Arrays.asList(strs).stream()
-            .min(Comparator.comparing(x -> x.length()))
+        String shortest = Arrays.stream(strs)
+            .min(Comparator.comparing(String::length))
             .get();
         
         int ind = 0;

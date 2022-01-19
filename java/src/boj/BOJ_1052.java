@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 
+// https://www.acmicpc.net/problem/1052
 public class BOJ_1052 {
     private static final String SMALL = "small";
     private static final String LARGE = "large";

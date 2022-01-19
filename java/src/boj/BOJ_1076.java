@@ -8,6 +8,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+// https://www.acmicpc.net/problem/1076
 public class BOJ_1076 {
 
     static final Map<String, long[]> colorMap = new HashMap<>() {

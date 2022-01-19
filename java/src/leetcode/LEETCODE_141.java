@@ -1,15 +1,10 @@
-/**
- * Definition for singly-linked list.
- * class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode(int x) {
- *         val = x;
- *         next = null;
- *     }
- * }
- */
-public class Solution {
+package leetcode;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
+
+public class LEETCODE_141 {
     public boolean hasCycle(ListNode head) {
         ListNode p = head;
         List<ListNode> visited = new ArrayList<>();
