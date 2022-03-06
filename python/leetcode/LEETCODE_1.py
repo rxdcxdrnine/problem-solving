@@ -1,3 +1,6 @@
+from typing import List
+
+# Leetcode #1
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         inds: List[int] = sorted([ind for ind in range(len(nums))], key=lambda x: nums[x])
@@ -14,3 +17,7 @@ class Solution:
                 left += 1
                 
         return inds[left], inds[right]
+
+
+if __name__ == "__main__":
+    print(Solution().twoSum([2, 7, 11, 15], 9))
