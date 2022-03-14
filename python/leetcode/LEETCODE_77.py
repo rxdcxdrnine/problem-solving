@@ -15,15 +15,15 @@ def dfs(n: int, k: int, now: int, count: int,
     if count == k:
         result.append(route[:])
 
-    for num in range(now + 1, n + 1):
-        if visited[num]:
+    for dest in range(now + 1, n + 1):
+        if visited[dest]:
             continue
 
-        visited[num] = True
-        route.append(num)
-        dfs(n, k, num, count + 1, visited, route, result)
+        visited[dest] = True
+        route.append(dest)
+        dfs(n, k, dest, count + 1, visited, route, result)
 
-        visited[num] = False
+        visited[dest] = False
         route.pop()
 
 

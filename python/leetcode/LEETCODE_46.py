@@ -17,15 +17,15 @@ def dfs(nums: List[int], count: int, visited: List[int],
         result.append(route[:])
         return
 
-    for ind in range(len(nums)):
-        if visited[ind]:
+    for dest in range(len(nums)):
+        if visited[dest]:
             continue
 
-        visited[ind] = True
-        route.append(nums[ind])
+        visited[dest] = True
+        route.append(nums[dest])
         dfs(nums, count + 1, visited, route, result)
 
-        visited[ind] = False
+        visited[dest] = False
         route.pop()
 
 
