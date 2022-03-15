@@ -21,28 +21,26 @@ def findItinerary(tickets: List[List[str]]) -> List[str]:
     route: List[str] = ["JFK"]
     result: List[List[str]] = []
 
-    dfs(graph, index, visited, route, result, "JFK", 0, len(tickets))
+    def dfs(now: str, count: int):
+
+        if count == len(tickets):
+            result.append(route[:])
+            return
+
+        for dest in graph[now]:
+            if len(result) == 1 or visited[index[now]][index[dest]] == 0:
+                continue
+
+            visited[index[now]][index[dest]] -= 1
+            route.append(dest)
+
+            dfs(dest, count + 1)
+
+            visited[index[now]][index[dest]] += 1
+            route.pop()
+
+    dfs("JFK", 0)
     return result[0]
-
-
-def dfs(graph: Dict[str, List[str]], index: Dict[str, int], visited: List[List[int]],
-        route: List[str], result: List[List[str]], now: str, count: int, target: int):
-
-    if count == target:
-        result.append(route[:])
-        return
-
-    for dest in graph[now]:
-        if len(result) == 1 or visited[index[now]][index[dest]] == 0:
-            continue
-
-        visited[index[now]][index[dest]] -= 1
-        route.append(dest)
-
-        dfs(graph, index, visited, route, result, dest, count + 1, target)
-
-        visited[index[now]][index[dest]] += 1
-        route.pop()
 
 
 if __name__ == "__main__":
