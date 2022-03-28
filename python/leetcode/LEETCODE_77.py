@@ -6,26 +6,24 @@ def combine(n: int, k: int) -> List[List[int]]:
     route: List[int] = []
     result: List[List[int]] = []
 
-    dfs(n, k, 0, 0, visited, route, result)
+    def dfs(now: int):
+        if len(route) == k:
+            result.append(route[:])
+
+        for dest in range(now + 1, n + 1):
+            if visited[dest]:
+                continue
+
+            visited[dest] = True
+            route.append(dest)
+            dfs(dest)
+
+            visited[dest] = False
+            route.pop()
+
+    dfs(0)
     return result
 
 
-def dfs(n: int, k: int, now: int, count: int,
-        visited: List[int], route: List[int], result: List[List[int]]):
-    if count == k:
-        result.append(route[:])
-
-    for dest in range(now + 1, n + 1):
-        if visited[dest]:
-            continue
-
-        visited[dest] = True
-        route.append(dest)
-        dfs(n, k, dest, count + 1, visited, route, result)
-
-        visited[dest] = False
-        route.pop()
-
-
 if __name__ == "__main__":
-    print(combine(1, 1))
+    print(combine(6, 3))

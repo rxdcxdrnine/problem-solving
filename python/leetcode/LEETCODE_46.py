@@ -6,27 +6,24 @@ def permute(nums: List[int]):
     route: List[int] = []
     result: List[List[int]] = []
 
-    dfs(nums, 0, visited, route, result)
+    def dfs():
+        if len(route) == len(nums):
+            result.append(route[:])
+            return
+
+        for dest in range(len(nums)):
+            if visited[dest]:
+                continue
+
+            visited[dest] = True
+            route.append(nums[dest])
+            dfs()
+
+            visited[dest] = False
+            route.pop()
+
+    dfs()
     return result
-
-
-def dfs(nums: List[int], count: int, visited: List[int],
-        route: List[int], result: List[List[int]]):
-
-    if count == len(nums):
-        result.append(route[:])
-        return
-
-    for dest in range(len(nums)):
-        if visited[dest]:
-            continue
-
-        visited[dest] = True
-        route.append(nums[dest])
-        dfs(nums, count + 1, visited, route, result)
-
-        visited[dest] = False
-        route.pop()
 
 
 if __name__ == "__main__":
